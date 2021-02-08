@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sýmpan</title>
+		<meta name="description" content="A script for creating a tilt effect on an image that follows mouse movement" />
+		<meta name="keywords" content="tilt, image, effect, web design, mouse, movement" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" /><!--css para movimento da imagem no inicio da pagina-->
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" /> <!--link para icons-->
+		<link rel="stylesheet" type="text/css" href="css/tilteffect.css" /><!--css para movimento da imagem no inicio da pagina-->
+		<link rel="stylesheet" type="text/css" href="css/demo.css" /><!--css para movimento da imagem no inicio da pagina-->
+        <link rel=stylesheet type="text/css" href="css/transi%C3%A7%C3%A3o.css"><!--css para transição lenta(fade in)-->
+        <link rel=stylesheet type="text/css" href="css/navbar.css"><!--css navbar-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/conteudo.css"><!--css para layout dividido em 3 e conteudo principal(div principal)-->
+        <link rel="stylesheet" type="text/css" href="css/parallax.css"><!--css parallax-->
+        <link rel="stylesheet" type="text/css" href="css/carousel.css"><!--css carousel-->
+        <link rel="stylesheet" type="text/css" href="css/footer.css"><!--css footer-->
+
+	</head>
+    <body class="fadeIn">        
+        <div class="container">
+
+            <!--inicio navbar!-->
+            <nav class="navbar">
+                <span class="open-slide">
+                    <a href="#" onclick="openSlideMenu()">
+                        <svg width="30" height="30">
+                            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                        </svg>
+                    </a>
+                </span>
+                <ul class="navbar-nav">
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true">  Search</i></a></li>
+      
+                </ul>
+            </nav>
+
+            <!-- menu que expande-->
+            <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <a href="pagina3.html">Home</a>
+                <a href="galeria.html">Gallery</a>
+                <a href="jogo.html">Game</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <!--fim navbar-->
+            
+            <!-- script movimento navbar-->
+            <script>
+                function openSlideMenu(){
+                    document.getElementById('side-menu').style.width = '250px';
+                    document.getElementById('main').style.marginLeft = '250px';
+                }
+
+                function closeSlideMenu(){
+                    document.getElementById('side-menu').style.width = '0';
+                    document.getElementById('main').style.marginLeft = '0';
+                }
+            </script>
+            <!--fim script navbar-->   
+            
+            <!-- imagem de inicio com movimento-->
+            <header class="codrops-header">
+                <div class="hero">
+                    <div class="hero__imgwrap">
+                        <img class="hero__img tilt-effect" data-tilt-options='{ "opacity" : 0.6, "movement": { "perspective" : 1500, "translateX" : 10, "translateY" : 10, "translateZ" : 2, "rotateX" : 3, "rotateY" : 3 } }' src="img/1.jpg" alt="Hero image" />
+                    </div>
+                    <h1><span>The sky isn´t the limit</span> SÝMPAN</h1>
+                    <div class="mobile-note">Aumente a tela para ver melhor.</div>
+                </div>
+            </header>
+            <!-- fim imagem com movimento-->
+            
+            <!--layout dividido em 3-->
+            <section class="section1">
+                <h3>Conheça o universo</h3>
+                <p class="section-lead">"O que é inconcebivel a respeito do universo é que ele é absolutamente concebivel."</p>
+                <div class="services-grid">
+                        
+                    <!--primeira caixa-->
+                    <div class="service service1">
+                        <i class="ti-bar-chart"></i>
+                        <h4>O big bang</h4>
+                        <p>Big Bang ou Grande Expansão é a teoria cosmológica dominante sobre o desenvolvimento inicial do universo. Os cosmólogos usam o termo "Big Bang" para se referir à idéia de que o universo estava originalmente muito quente e denso em algum tempo finito no passado. Desde então tem se resfriado pela expansão ao estado diluído atual e continua em expansão atualmente. A teoria é sustentada por explicações mais completas e precisas a partir de evidências científicas. De acordo com as melhores medições disponíveis em 2010, as condições iniciais ocorreram há aproximadamente 13,3 ou 13,9 bilhões de anos.</p>
+                    
+                    </div>
+                    
+                    <!--segunda caixa-->
+                    <div class="service service2">
+                        <i class="ti-light-bulb"></i>
+                        <h4>Apollo 11</h4>
+                        <p>Apollo 11 foi um vôo espacial tripulado norte-americano responsável pelo primeiro pouso na Lua. Os astronautas Neil Armstrong e Buzz Aldrin alunissaram o módulo lunar  Eagle em 20 de julho de 1969 às 20h17min. Armstrong tornou-se o primeiro humano a pisar na superfície lunar seis horas depois já no dia 21, seguido por  Aldrin vinte minutos depois. Os dois passaram por volta de duas horas e quinze minutos fora da espaçonave e coletaram 21,5 quilogramas de material para trazer de volta à Terra. Michael Collins pilotou sozinho o módulo de comando e serviço Columbia na órbita da Lua enquanto seus companheiros estavam na superfície. </p>
+                       
+                    </div>
+                    
+                    <!--terceira caixa-->
+                    <div class="service service3">
+                        <i class="ti-money"></i>
+                        <h4>Primeiro Brasileiro na lua</h4>
+                        <p> Em 30 de março de 2006 Marcos Pontes partiu para a Estação Espacial Internacional (ISS) a bordo da nave russa Soyuz TMA-8, com oito experimentos científicos brasileiros para execução em ambiente de micro gravidade. Retornou no dia 8 de abril, a bordo da nave Soyuz TMA-7. Com o feito, Pontes tornou-se o primeiro brasileiro e quinto latino-americano a ir ao espaço. Tendo realizado o sonho de quase todas as crianças do mundo, Marcos Pontes se destaca como o primeiro astronauta profissional do Hemisfério Sul do Planeta, formado pela NASA, a viajar pelo espaço com a bandeira de seu país. </p>
+                      
+                        
+                    </div>
+                </div>
+                <br>
+            </section>
+            <!--fim layout dividido em 3-->
+      
+            <!--Parallax-->
+            <section class="header-site">
+               
+                <div class="row">
+                    <div class="col-xs-12">
+                    </div>                        
+                </div>
+                   
+            </section>
+            <!--fim Parallax-->
+            
+            <br><br><br><br>
+            <div class="principal"  >
+                <h4>O Início da Teoria da Relatividade</h4>
+                <p>A teoria da relatividade foi uma revolução para o século XX, pois ela provocou inúmeras transformações em conceitos básicos e também proporcionou que fatos importantes, ainda não explicáveis, pudessem  ser entendidos. Essa teoria surgiu com o físico alemão Albert Einstein. Nascido em Ulm, Einstein foi um físico e pesquisador muito conhecido por ter proposto a teoria da relatividade, mas também foi ele que explicou corretamente o efeito fotoelétrico, fato esse que possibilitou o desenvolvimento da bomba atômica, mesmo sem ele saber para quais fins se destinava.</p>
+                <p>A teoria da relatividade é composta de duas outras teorias: Teoria da Relatividade Restrita, que estuda os fenômenos em relação a referenciais inerciais, e a Teoria da Relatividade Geral, que aborda fenômenos do ponto de vista não inercial. Apesar de formar uma só teoria, elas foram propostas em tempos diferentes, mas ambas trouxeram o conhecimento de que os movimentos do Universo não são absolutos, mas, sim, relativos.</p>
+                <br>
+                <center>
+                <img src="img/teoria%20da%20relatividade.jpg" width="1000px">
+                </center>
+                <br>
+                <p>A relatividade pode não ser um assunto muito comum no dia a dia, mas ela faz parte do nosso cotidiano. Quando aproximamos da velocidade da luz, tudo muda. Nesse sentido, a relatividade é muito importante. Não é possível ver como isso ocorre em carros e aviões, mas as partículas subatômicas podem movimentar-se muito rápido, podendo alcançar velocidades bem próximas à velocidade da luz.</p>
+                <p>O GPS é um instrumento muito comum na atualidade e utiliza mecanismos advindos da relatividade para determinar com alta precisão as posições na Terra. Encontrado em celulares de última geração, esse instrumento depende de 24 satélites ao redor da Terra para determinar corretamente correta a posição. Se não fosse a relatividade, todas as medidas estariam erradas.</p>
+                <p>Os cálculos e correções relativísticos são necessários em consequência da velocidade dos satélites, aproximadamente 14 mil km/h. Essa velocidade é realmente pequena se comparada com a velocidade da luz, mas mesmo assim os cálculos são necessários.</p>
+            </div>
+            <br><br><br><br>
+        
+            <!--carousel-->
+            <div class="slider">
+                <div class="slide_viewer">
+                    <div class="slide_group">
+                        <div class="slide"><img src="img/slider1.jpg" width="1000px">
+                        </div>
+                        <div class="slide"><img src="img/slider2.jpg" width="1000px">
+                        </div>
+                        <div class="slide"><img src="img/slider3.jpg" width="1000px">
+                        </div>
+                        <div class="slide"><img src="img/slider4.jpg" width="1000px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide_buttons">
+            </div>
+
+            <div class="directional_nav">
+                <div class="previous_btn" title="Previous">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                        <g>
+                            <g>
+                                <path fill="#474544" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+                                c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
+                                <path fill="#474544" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="next_btn" title="Next">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                        <g>
+                            <g>
+                                <path fill="#474544" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
+                                <path fill="#474544" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <!--fim carousel-->
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            
+            <!--script carousel-->
+            <script>
+                $('.slider').each(function() {
+                    var $this = $(this);
+                    var $group = $this.find('.slide_group');
+                    var $slides = $this.find('.slide');
+                    var bulletArray = [];
+                    var currentIndex = 0;
+                    var timeout;
+                    
+                    function move(newIndex) {
+                        var animateLeft, slideLeft;
+    
+                        advance();
+    
+                        if ($group.is(':animated') || currentIndex === newIndex) {
+                            return;
+                        }
+    
+                        bulletArray[currentIndex].removeClass('active');
+                        bulletArray[newIndex].addClass('active');
+    
+                        if (newIndex > currentIndex) {
+                            slideLeft = '100%';
+                            animateLeft = '-100%';
+                        } else {
+                            slideLeft = '-100%';
+                            animateLeft = '100%';
+                        }
+    
+                        $slides.eq(newIndex).css({
+                            display: 'block',
+                            left: slideLeft
+                        });
+                        $group.animate({
+                            left: animateLeft
+                        }, function() {
+                            $slides.eq(currentIndex).css({
+                                display: 'none'
+                            });
+                            $slides.eq(newIndex).css({
+                                left: 0
+                            });
+                            $group.css({
+                                left: 0
+                            });
+                            currentIndex = newIndex;
+                        });
+                    }
+  
+                    function advance() {
+                        clearTimeout(timeout);
+                        timeout = setTimeout(function() {
+                            if (currentIndex < ($slides.length - 1)) {
+                                move(currentIndex + 1);
+                            } else {
+                                move(0);
+                            }
+                        }, 4000);
+                    }
+  
+                    $('.next_btn').on('click', function() {
+                        if (currentIndex < ($slides.length - 1)) {
+                            move(currentIndex + 1);
+                        } else {
+                            move(0);
+                        }
+                    });
+  
+                    $('.previous_btn').on('click', function() {
+                        if (currentIndex !== 0) {
+                            move(currentIndex - 1);
+                        } else {
+                            move(3);
+                        }
+                    });
+  
+                    $.each($slides, function(index) {
+                        var $button = $('<a class="slide_btn">&bull;</a>');
+    
+                        if (index === currentIndex) {
+                            $button.addClass('active');
+                        }
+                        $button.on('click', function() {
+                            move(index);
+                        }).appendTo('.slide_buttons');
+                        bulletArray.push($button);
+                    });
+                    
+                    advance();
+                });
+            </script>
+            <!--fim script carousel-->
+            
+            <!--footer-->
+            <footer class="flex-rw">
+                <section class="footer-social-section flex-rw">
+                    <span class="footer-social-overlap footer-social-connect">
+                        <span class="footer-social-small">Sýmpan</span> 
+                    </span>
+                    <span class="footer-social-overlap footer-social-icons-wrapper">
+                        <a href=# class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+                        <a href=# class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+                        <a href=# class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+                        <a href=# class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+                        <a href=# class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+                        <a href=# class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+                    </span>
+                </section>
+                <section class="footer-bottom-section flex-rw"> 
+                    <div class="footer-bottom-wrapper">   
+                        <i class="fa fa-copyright" role="copyright">
+ 
+                        </i> 2019 Etec Guaianazes - Stephani Santos, Tais Firmino e Tamara Basilio 
+                    </div>
+                    <div class="footer-bottom-wrapper">
+                        <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+                    </div>
+                </section>
+            </footer>
+            <!--fim footer-->
+            
+        </div><!-- container -->
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/tiltfx.js"></script><!--movimento imagem-->
+            
+    </body>
+</html>
